@@ -10,7 +10,7 @@ const HeroSection = () => {
       className="relative  overflow-hidden"
     >
       {/* Background Pattern */}
-      <div className="absolute bg-[url('brick-wall.svg')]  inset-0 z-0  bg-repeat bg-center opacity-20" />
+      <div className="absolute   inset-0 z-0  bg-repeat bg-center opacity-20" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +80,7 @@ const HeroSection = () => {
 
         {/* Profile Photo */}
         <img
-          src="/profile-pic.png"
+          src="/undraw_developer-avatar.svg"
           alt="Md. Soyeb Islam"
           className="w-48 h-48 rounded-full object-cover shadow-lg"
         />

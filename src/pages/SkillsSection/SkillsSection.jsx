@@ -28,8 +28,8 @@ const SkillsTechnologies = () => {
       className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
     >
       <h2
-        className="font-dillan text-start text-3xl mb-8"
-        style={{ WebkitTextStroke: "1px black" }}
+        className="font-dillan text-start text-4xl mb-8"
+        style={{ WebkitTextStroke: "1.5px black" }}
       >
         Skills & Technologies
       </h2>
