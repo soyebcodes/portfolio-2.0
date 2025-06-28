@@ -15,8 +15,9 @@
 }
 
 .font-dillan {
-  font-family: "Made Dillan";
-  src: url("./assets/fonts/MADE-Dillan.otf") format("truetype");
-  font-weight: normal;
+  font-family: "Made Dillan, cursive";
+  src: url("./assets/fonts/MADE-Dillan.otf") format("opentype");
+  font-weight: 400;
+  color: rgb(0, 0, 0);
   font-style: normal;
 }

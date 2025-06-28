@@ -31,8 +31,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `font-inter transition px-3 py-1 rounded-full ${
                     isActive
-                      ? "text-white font-semibold bg-[#008236] border border-[#008236]"
-                      : "text-gray-700 hover:text-[#008236]"
+                      ? "text-white  bg-[#008236] border border-[#008236]"
+                      : "text-black font-bold hover:text-[#008236]"
                   }`
                 }
               >
