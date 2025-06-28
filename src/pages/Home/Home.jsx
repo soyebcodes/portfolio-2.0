@@ -1,18 +1,13 @@
 import React from "react";
 import HeroSection from "../HeroSection/HeroSection";
-import AboutMe from "../AboutMe/AboutMe";
-import SkillsSection from "../SkillsSection/SkillsSection";
-import ProjectsSection from "../ProjectSection/ProjectSection";
-import ContactSection from "../ContactSection/ContactSection";
+import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
-      <AboutMe />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
+      <hr className="text-[#99A1AF]" />
+      <FeaturedProjects />
     </div>
   );
 };
