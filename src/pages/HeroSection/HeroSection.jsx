@@ -7,7 +7,7 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative bg-white overflow-hidden"
+      className="relative  overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute bg-[url('brick-wall.svg')]  inset-0 z-0  bg-repeat bg-center opacity-20" />

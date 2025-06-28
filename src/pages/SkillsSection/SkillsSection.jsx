@@ -28,7 +28,7 @@ const SkillsTechnologies = () => {
       className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
     >
       <h2
-        className="font-dillan text-3xl mb-8 text-[#008236]"
+        className="font-dillan text-start text-3xl mb-8"
         style={{ WebkitTextStroke: "1px black" }}
       >
         Skills & Technologies
@@ -39,7 +39,7 @@ const SkillsTechnologies = () => {
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
-            className="bg-white shadow-md rounded-lg px-4 py-3 text-center  font-medium text-gray-800 border border-[#008236] hover:border-[#008236] hover:text-[#008236] transition"
+            className="shadow-md rounded-lg px-4 py-3 text-center  font-medium text-gray-800 border border-[#008236] hover:border-[#008236] hover:text-[#008236] transition"
           >
             {skill}
           </motion.div>
