@@ -15,13 +15,13 @@ const HeroSection = () => {
         <title>Home</title>
       </Helmet>
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Left Side Text */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-xl space-y-6 md:text-start sm:text-center"
+          className="max-w-xl space-y-6 text-center md:text-start sm:text-center lg:text-start py-8"
         >
           <h1 className="text-7xl font-extrabold">
             {/* Light Mode Version */}
