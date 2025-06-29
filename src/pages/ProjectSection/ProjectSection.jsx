@@ -13,6 +13,7 @@ import { ArrowBigRight } from "lucide-react";
 import { ArrowRightIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { ArrowRightToLine } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const projects = [
   {
@@ -89,6 +90,9 @@ const ProjectsSection = () => {
       viewport={{ once: true }}
       className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
     >
+      <Helmet>
+        <title>Project | Soyeb Codes</title>
+      </Helmet>
       <motion.h2 className="text-7xl text-start mb-7 font-extrabold">
         {/* Light Mode Version */}
         <span

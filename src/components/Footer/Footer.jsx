@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex items-center text-[#008236] cursor-pointer">
+    <div className="max-w-5xl mx-auto flex items-center text-[#008236] cursor-pointer">
       <AtSign size={18} /> soyebislam_1 <ArrowRight size={18} />
     </div>
   );

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { LucideTwitter, Facebook, Linkedin, Github } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet-async";
 
 const HeroSection = () => {
   return (
@@ -10,6 +11,9 @@ const HeroSection = () => {
       transition={{ duration: 0.7 }}
       className="relative overflow-hidden"
     >
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side Text */}
@@ -52,7 +56,13 @@ const HeroSection = () => {
           <p className="text-gray-700 dark:text-white">
             I'm a frontend developer based in Rangpur, Bangladesh.
           </p>
-
+          <p>
+            I love to{" "}
+            <a href="/projects" className="text-[#008236] underline">
+              build things
+            </a>{" "}
+            with JavaScript and publish articles regularly.
+          </p>
           {/* Resume Button */}
           <a
             href="/soyeb.pdf"

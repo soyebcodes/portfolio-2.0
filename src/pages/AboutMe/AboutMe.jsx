@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 
 const AboutMe = () => {
   return (
@@ -8,8 +9,11 @@ const AboutMe = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-18"
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
     >
+      <Helmet>
+        <title>About | Soyeb Codes</title>
+      </Helmet>
       <div className="text-center md:text-left">
         <h1 className="text-4xl mb-3 font-extrabold">
           {/* Light Mode Version */}

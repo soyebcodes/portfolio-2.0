@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -19,6 +20,9 @@ const ContactSection = () => {
       viewport={{ once: true }}
       className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
     >
+      <Helmet>
+        <title>Contact | Soyeb Codes</title>
+      </Helmet>
       <>
         {/* Light Mode Heading */}
         <motion.h2
@@ -107,6 +111,7 @@ const ContactSection = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          netlify
           action="/success.html"
           className="space-y-6 backdrop-blur p-6 rounded-xl shadow-md"
         >
@@ -147,7 +152,7 @@ const ContactSection = () => {
 
           <button
             type="submit"
-            className="w-full px-6 py-2 bg-[#008236] text-white font-medium rounded-lg hover:bg-[#006a2c] transition"
+            className="w-full px-6 py-2 bg-[#008236] text-white font-medium rounded-lg hover:bg-[#006a2c] transition cursor-pointer"
           >
             Send Message
           </button>
