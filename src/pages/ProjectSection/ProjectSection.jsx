@@ -181,7 +181,7 @@ const ProjectsSection = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[#008236] hover:underline"
+                    className="flex items-center gap-1 text-[#008236] dark:text-white hover:underline"
                   >
                     <ExternalLink size={16} />
                     Live Site
@@ -190,7 +190,7 @@ const ProjectsSection = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[#008236] hover:underline"
+                    className="flex items-center gap-1 text-[#008236] hover:underline dark:text-white"
                   >
                     <Github size={16} />
                     GitHub
