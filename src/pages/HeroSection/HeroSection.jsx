@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { LucideTwitter, Facebook, Linkedin, Github } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   return (
@@ -7,27 +8,49 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="relative  overflow-hidden"
+      className="relative overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute   inset-0 z-0  bg-repeat bg-center opacity-20" />
-
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Intro Text */}
-        <div className="max-w-xl space-y-6 md:text-start sm:text-center">
-          <h1
-            className="font-dillan text-7xl font-extrabold"
-            style={{ WebkitTextStroke: "2.5px black" }}
-          >
-            I'm Söyeb Islam
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12 py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Left Side Text */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-xl space-y-6 md:text-start sm:text-center"
+        >
+          <h1 className="text-7xl font-extrabold">
+            {/* Light Mode Version */}
+            <span
+              className="block dark:hidden font-dillan text-black"
+              style={{
+                WebkitTextStroke: "2.5px black",
+              }}
+            >
+              I'm Söyeb Islam
+            </span>
+
+            {/* Dark Mode Version */}
+            <span className="hidden dark:block  text-white">
+              I'm Söyeb Islam
+            </span>
           </h1>
-          <p className="font-inter font-semibold text-[#008236]">
-            Full Stack Developer
+
+          {/* Typewriter Effect */}
+          <p className="font-inter font-semibold text-[#008236] text-xl">
+            <Typewriter
+              words={["Full Stack Developer", "React & Next.js Expert"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={60}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
           </p>
-          <p className="text-gray-700">
-            Passionate about building modern web applications with a focus on
-            performance and user experience.
+
+          <p className="text-gray-700 dark:text-white">
+            I'm a frontend developer based in Rangpur, Bangladesh.
           </p>
 
           {/* Resume Button */}
@@ -42,7 +65,12 @@ const HeroSection = () => {
           </a>
 
           {/* Social Links */}
-          <div className="flex justify-center md:justify-start space-x-6 mt-6 text-[#008236] text-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex justify-center md:justify-start space-x-6 mt-6 text-[#008236] text-3xl"
+          >
             <a
               href="https://github.com/soyebcodes"
               target="_blank"
@@ -75,15 +103,36 @@ const HeroSection = () => {
             >
               <Facebook />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Profile Photo */}
-        <img
-          src="/undraw_developer-avatar.svg"
-          alt="Md. Soyeb Islam"
-          className="w-48 h-48 rounded-full object-cover shadow-lg"
-        />
+        {/* Right Side: Spinning Ring + Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative w-48 h-48"
+        >
+          {/* Spinning Glowing Ring */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "linear",
+            }}
+            className="absolute inset-0 rounded-full border-4 border-[#008236] shadow-[0_0_20px_#008236] z-0"
+          />
+
+          {/* Static Profile Image */}
+          <div className="relative w-full h-full rounded-full overflow-hidden shadow-lg z-10">
+            <img
+              src="/undraw_developer-avatar.svg"
+              alt="Md. Soyeb Islam"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

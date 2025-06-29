@@ -89,12 +89,21 @@ const ProjectsSection = () => {
       viewport={{ once: true }}
       className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
     >
-      <h2
-        className="font-dillan text-4xl  text-start mb-3"
-        style={{ WebkitTextStroke: "2px black" }}
-      >
-        Projects
-      </h2>
+      <motion.h2 className="text-7xl text-start mb-7 font-extrabold">
+        {/* Light Mode Version */}
+        <span
+          className="block dark:hidden font-dillan text-black"
+          style={{
+            WebkitTextStroke: "2.5px black",
+          }}
+        >
+          Projects
+        </span>
+
+        {/* Dark Mode Version */}
+        <span className="hidden dark:block text-3xl text-white">Projects</span>
+      </motion.h2>
+
       <div className="flex items-center justify-between">
         <p className="text-start font-inter text-lg mb-6">
           You can also find all my repos on{" "}
@@ -123,7 +132,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur rounded-lg shadow-md hover:shadow-lg transition overflow-hidden"
+              className="backdrop-blur rounded-lg shadow-md hover:shadow-lg transition overflow-hidden"
             >
               {/* Image or BG Color */}
               <div className="relative h-56 w-full">
@@ -148,7 +157,9 @@ const ProjectsSection = () => {
 
               {/* Description + Tools + Links */}
               <div className="p-4 flex flex-col items-center text-center">
-                <p className="text-gray-700 mb-3">{project.description}</p>
+                <p className="text-gray-700 mb-3 dark:text-white">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap justify-center gap-2 mb-4">
                   {project.tools.map((tool, i) => (
