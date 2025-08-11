@@ -14,8 +14,30 @@ import { ArrowRightIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { ArrowRightToLine } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { ShoppingBag } from "lucide-react";
 
 const projects = [
+  {
+    name: "MediKart",
+    description:
+      "Full-stack multi-vendor pharmacy platform built with MERN Stack, featuring authentication, role-based dashboards, Stripe payments, dynamic search/filtering, and responsive UI.",
+    tools: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Zustand",
+      "Stripe",
+      "React Query",
+      "JWT",
+    ],
+    liveLink: "https://medikartt.netlify.app/",
+    github: "https://github.com/soyebcodes/medikart-client",
+    icon: ShoppingBag,
+    image: "/projects/medikart.png",
+  },
   {
     name: "CarWise",
     description:
