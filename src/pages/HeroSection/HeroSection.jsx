@@ -59,7 +59,7 @@ const HeroSection = () => {
           <p>
             I love to{" "}
             <a href="/projects" className="text-[#008236] underline">
-              build things
+              build things{" "}
             </a>
             with JavaScript and publish articles regularly.
           </p>
