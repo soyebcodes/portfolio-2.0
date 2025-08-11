@@ -3,9 +3,10 @@ import { NavLink } from "react-router";
 import { Star, Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : true; // Default to dark if no saved theme
+  });
 
   useEffect(() => {
     const theme = isDark ? "dark" : "light";
