@@ -90,7 +90,7 @@ const HeroSection = () => {
               <Github />
             </a>
             <a
-              href="https://www.linkedin.com/in/md-soyeb-islam-285a00363/"
+              href="https://https://www.linkedin.com/in/soyebislam3"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -106,7 +106,7 @@ const HeroSection = () => {
               <LucideTwitter />
             </a>
             <a
-              href="https://web.facebook.com/shoaib.5782/"
+              href="https://web.facebook.com/soyeb.islam.113/"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
