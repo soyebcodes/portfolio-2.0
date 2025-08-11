@@ -63,7 +63,7 @@ const ContactSection = () => {
                 href="mailto:youremail@example.com"
                 className="text-gray-600 dark:text-white hover:underline"
               >
-                soyeb10191@gmail.com
+                soyeb.islam117@gmail.com
               </a>
             </div>
           </div>
@@ -94,7 +94,7 @@ const ContactSection = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/md-soyeb-islam-285a00363/"
+              href="https://www.linkedin.com/in/soyebislam3"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#008236] hover:opacity-80 transition"
