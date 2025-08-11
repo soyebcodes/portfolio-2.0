@@ -54,7 +54,7 @@ const AboutMe = () => {
         <p className="font-inter text-black mt-4 leading-relaxed dark:text-white ">
           Find out more about me {""}
           <a
-            href="https://drive.google.com/file/d/1FaIkep8uc8O_adxjj0bTpYnTK0TV1rij/view?usp=sharing"
+            href="https://drive.google.com/file/d/10ThPSMN7B_cPuWWwUN36Wby-UlpVLYOv/view?usp=sharing"
             className="text-[#008236] underline"
           >
             by visiting this page.
