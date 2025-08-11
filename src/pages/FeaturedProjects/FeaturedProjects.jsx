@@ -9,8 +9,30 @@ import {
 } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
+import { ShoppingBag } from "lucide-react";
 
 const featuredProjects = [
+  {
+    name: "MediKart - Multi-Vendor E-commerce Pharmacy",
+    description:
+      "Full-stack multi-vendor pharmacy platform built with MERN Stack, featuring authentication, role-based dashboards, Stripe payments, dynamic search/filtering, and responsive UI.",
+    tools: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Zustand",
+      "Stripe",
+      "React Query",
+      "JWT",
+    ],
+    liveLink: "https://medikartt.netlify.app/",
+    github: "https://github.com/soyebcodes/medikart-client",
+    icon: ShoppingBag,
+    image: "/projects/medikart.png",
+  },
   {
     name: "CarWise",
     description:
@@ -40,16 +62,6 @@ const featuredProjects = [
     github: "https://github.com/soyebcodes/tasty-track-client",
     icon: UtensilsCrossed,
     image: "/projects/tastytrack.png",
-  },
-  {
-    name: "Music School",
-    description:
-      "Enroll in a variety of music courses with Next.js and Aceternity UI.",
-    tools: ["Next.js", "Aceternity UI"],
-    liveLink: "https://music-school-nextjs-gold.vercel.app/",
-    github: "https://github.com/soyebcodes/music-school-nextjs",
-    icon: Music,
-    image: "/projects/music.png",
   },
 ];
 
