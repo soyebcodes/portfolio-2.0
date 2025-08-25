@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-import { Star, Sun, Moon } from "lucide-react";
+import { Star, Sun, Moon, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme ? savedTheme === "dark" : true; // Default to dark if no saved theme
   });
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const theme = isDark ? "dark" : "light";
@@ -22,9 +24,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full shadow z-50 transition">
+    <nav className="fixed top-0 left-0 w-full shadow z-50 bg-white dark:bg-gray-900 transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center md:justify-between h-16 gap-4">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <NavLink
             to="/"
@@ -34,8 +36,8 @@ const Navbar = () => {
             Soyeb Codes
           </NavLink>
 
-          {/* Nav Links */}
-          <div className="flex flex-wrap items-center gap-4">
+          {/* Desktop Nav Links */}
+          <div className="hidden md:flex items-center gap-4">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -52,7 +54,7 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            {/* Dark Mode Toggle Button */}
+            {/* Dark Mode Toggle */}
             <button
               className="btn btn-sm btn-circle"
               onClick={() => setIsDark((prev) => !prev)}
@@ -61,8 +63,47 @@ const Navbar = () => {
               {isDark ? <Sun className="text-yellow-400" /> : <Moon />}
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              className="btn btn-sm btn-circle"
+              onClick={() => setIsDark((prev) => !prev)}
+              aria-label="Toggle Theme"
+            >
+              {isDark ? <Sun className="text-yellow-400" /> : <Moon />}
+            </button>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Nav Links */}
+      {menuOpen && (
+        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 flex flex-col gap-3 shadow-lg">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.to}
+              className={({ isActive }) =>
+                `font-inter transition px-3 py-2 rounded-md ${
+                  isActive
+                    ? "text-white bg-[#008236]"
+                    : "text-black dark:text-white font-bold hover:text-[#008236]"
+                }`
+              }
+              onClick={() => setMenuOpen(false)} // Close menu when clicking a link
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
