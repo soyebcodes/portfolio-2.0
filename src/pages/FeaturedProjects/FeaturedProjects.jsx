@@ -10,8 +10,29 @@ import {
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { ShoppingBag } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const featuredProjects = [
+  {
+    name: "AI Job Tracker",
+    description:
+      "AI-powered web application to track job applications, analyze resumes, and match job descriptions with required skills. Includes authentication, resume upload, AI resume analyzer, and dashboard analytics.",
+    tools: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Prisma",
+      "Supabase",
+      "NextAuth.js",
+      "OpenAI API",
+      "Vercel",
+    ],
+    liveLink: "https://jobflow-liard.vercel.app/",
+    github: "https://github.com/soyebcodes/ai-job-application-tracker",
+    icon: Briefcase,
+    image: "/projects/ai-job-tracker.png",
+  },
   {
     name: "MediKart - Multi-Vendor E-commerce Pharmacy",
     description:
@@ -42,16 +63,6 @@ const featuredProjects = [
     github: "https://github.com/soyebcodes/carwise-client",
     icon: Car,
     image: "/projects/carwise.png",
-  },
-  {
-    name: "Acme Dashboard",
-    description:
-      "Admin dashboard with clean and scalable UI using Next.js & TypeScript.",
-    tools: ["Next.js", "Tailwind", "TypeScript"],
-    liveLink: "https://nextjs-dashboard-eight-pied-58.vercel.app/",
-    github: "https://github.com/soyebcodes/nextjs-dashboard",
-    icon: LayoutDashboard,
-    image: "/projects/acme.png",
   },
   {
     name: "Tasty Track",
