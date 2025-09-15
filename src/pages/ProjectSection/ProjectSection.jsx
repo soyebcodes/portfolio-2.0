@@ -15,8 +15,29 @@ import { ArrowRight } from "lucide-react";
 import { ArrowRightToLine } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { ShoppingBag } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const projects = [
+  {
+    name: "AI Job Tracker",
+    description:
+      "AI-powered web application to track job applications, analyze resumes, and match job descriptions with required skills. Includes authentication, resume upload, AI resume analyzer, and dashboard analytics.",
+    tools: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Prisma",
+      "Supabase",
+      "NextAuth.js",
+      "OpenAI API",
+      "Vercel",
+    ],
+    liveLink: "https://jobflow-liard.vercel.app/",
+    github: "https://github.com/soyebcodes/ai-job-application-tracker",
+    icon: Briefcase,
+    image: "/projects/ai-job-tracker.png",
+  },
   {
     name: "MediKart",
     description:
