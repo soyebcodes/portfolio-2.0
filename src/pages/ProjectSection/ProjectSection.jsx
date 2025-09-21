@@ -19,7 +19,7 @@ import { Briefcase } from "lucide-react";
 
 const projects = [
   {
-    name: "AI Job Tracker",
+    name: "Job Flow",
     description:
       "AI-powered web application to track job applications, analyze resumes, and match job descriptions with required skills. Includes authentication, resume upload, AI resume analyzer, and dashboard analytics.",
     tools: [
